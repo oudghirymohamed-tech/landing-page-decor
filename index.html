@@ -461,6 +461,13 @@
       display: block;
     }
 
+    .product-photo {
+      object-fit: contain !important;
+      object-position: center bottom;
+      padding: 18px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, .98), rgba(246, 246, 246, .96));
+    }
+
     .product-img-placeholder {
       display: flex;
       flex-direction: column;
@@ -1460,12 +1467,8 @@
       <div class="product-card">
         <!-- Image -->
         <div class="product-img-wrap">
-          <div class="product-img-placeholder">
-            <div class="wood-rings-deco"></div>
-            <div class="icon">🪞</div>
-            <div class="wood-grain-badge">🌲 خشب طبيعي 100%</div>
-            <p>ضع صورة المنتج هنا</p>
-          </div>
+          <img class="product-photo" src="image coiffuse/Gemini_Generated_Image_cwmpuzcwmpuzcwmp.png"
+            alt="كوافيوز عصرية من الخشب الطبيعي مع مرآة مضيئة" />
           <div class="product-badge">🔥 عرض محدود</div>
         </div>
         <!-- Info -->
