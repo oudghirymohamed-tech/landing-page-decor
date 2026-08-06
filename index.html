@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet" />
+<<<<<<< HEAD
   <style>
     /* ===== RESET ===== */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -535,10 +536,25 @@
       40%,80%  { transform: translateX(7px); }
     }
   </style>
+=======
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+>>>>>>> a641b92 (feat: modern, responsive, fully refactored landing page)
 </head>
 
 <body>
 
+<<<<<<< HEAD
+=======
+  <!-- Scroll progress bar -->
+  <div id="scrollProgress"></div>
+
+>>>>>>> a641b92 (feat: modern, responsive, fully refactored landing page)
   <!-- TOPBAR -->
   <div class="topbar">
     🚚 توصيل سريع لجميع المدن &nbsp;|&nbsp;
@@ -588,6 +604,21 @@
           <div class="hf-item"><span class="hf-check">✓</span> ضمان جودة سنة كاملة</div>
         </div>
 
+<<<<<<< HEAD
+=======
+        <!-- Countdown timer -->
+        <div class="countdown-wrap">
+          <span class="cd-label">⏰ العرض ينتهي بعد:</span>
+          <div class="countdown-digits">
+            <span class="cd-box" id="cdH">00</span>
+            <span class="cd-sep">:</span>
+            <span class="cd-box" id="cdM">00</span>
+            <span class="cd-sep">:</span>
+            <span class="cd-box" id="cdS">00</span>
+          </div>
+        </div>
+
+>>>>>>> a641b92 (feat: modern, responsive, fully refactored landing page)
         <div class="hero-img-wrap">
           <img
             class="hero-img"
@@ -609,6 +640,7 @@
             <div class="form-card-sub">أملا المعلومات ونتواصلو معاك ⚡</div>
           </div>
 
+<<<<<<< HEAD
           <form id="orderForm" novalidate>
 
             <div class="form-row">
@@ -619,12 +651,46 @@
               <div class="form-group">
                 <label for="lastName">النسب <span class="req">*</span></label>
                 <input class="form-control" id="lastName" type="text" placeholder="الأمين" required autocomplete="family-name" />
+=======
+          <!-- Form steps -->
+          <div class="form-steps" id="formSteps">
+            <div class="form-step active" data-step="1">
+              <div class="step-dot">1</div>
+              <div class="step-lbl">معلوماتك</div>
+            </div>
+            <div class="form-step" data-step="2">
+              <div class="step-dot">2</div>
+              <div class="step-lbl">المدينة</div>
+            </div>
+            <div class="form-step" data-step="3">
+              <div class="step-dot">3</div>
+              <div class="step-lbl">اللون</div>
+            </div>
+          </div>
+
+          <form id="orderForm" novalidate>
+
+            <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">الاسم <span class="req">*</span></label>
+              <input class="form-control" id="firstName" type="text" placeholder="مريم" required autocomplete="given-name" />
+              <div class="field-msg">✓ ممتاز</div>
+            </div>
+              <div class="form-group">
+                <label for="lastName">النسب <span class="req">*</span></label>
+                <input class="form-control" id="lastName" type="text" placeholder="الأمين" required autocomplete="family-name" />
+                <div class="field-msg">✓ ممتاز</div>
+>>>>>>> a641b92 (feat: modern, responsive, fully refactored landing page)
               </div>
             </div>
 
             <div class="form-group">
               <label for="phone">رقم الهاتف <span class="req">*</span></label>
               <input class="form-control" id="phone" type="tel" placeholder="06XXXXXXXX" required pattern="[0-9]{10}" autocomplete="tel" />
+<<<<<<< HEAD
+=======
+              <div class="field-msg" id="phoneMsg">✓ رقم صحيح</div>
+>>>>>>> a641b92 (feat: modern, responsive, fully refactored landing page)
             </div>
 
             <div class="form-group">
@@ -645,16 +711,42 @@
                 <option>تمارة</option>
                 <option>مدينة أخرى</option>
               </select>
+<<<<<<< HEAD
             </div>
 
             <div class="form-group">
               <label for="color">لون الخشب <span class="req">*</span></label>
+=======
+              <div class="field-msg">✓ تم الاختيار</div>
+            </div>
+
+            <div class="form-group">
+              <label>لون الخشب <span class="req">*</span></label>
+              <div class="color-swatches">
+                <button type="button" class="swatch-btn" data-value="خشب غامق">
+                  <div class="swatch-circle dark"><span class="swatch-check">✓</span></div>
+                  <span class="swatch-label">غامق</span>
+                </button>
+                <button type="button" class="swatch-btn" data-value="خشب فاتح">
+                  <div class="swatch-circle light"><span class="swatch-check">✓</span></div>
+                  <span class="swatch-label">فاتح</span>
+                </button>
+                <button type="button" class="swatch-btn" data-value="خشب أبيض">
+                  <div class="swatch-circle white"><span class="swatch-check">✓</span></div>
+                  <span class="swatch-label">أبيض</span>
+                </button>
+              </div>
+>>>>>>> a641b92 (feat: modern, responsive, fully refactored landing page)
               <select class="form-control" id="color" required>
                 <option value="" disabled selected>اختار لون الخشب</option>
                 <option value="خشب غامق">خشب غامق</option>
                 <option value="خشب فاتح">خشب فاتح</option>
                 <option value="خشب أبيض">خشب أبيض</option>
               </select>
+<<<<<<< HEAD
+=======
+              <div class="field-msg" id="colorMsg">✓ تم اختيار اللون</div>
+>>>>>>> a641b92 (feat: modern, responsive, fully refactored landing page)
             </div>
 
             <button class="btn-submit" type="submit" id="submitBtn">
@@ -740,6 +832,44 @@
     </div>
   </section>
 
+<<<<<<< HEAD
+=======
+  <!-- ===== HOW IT WORKS ===== -->
+  <section class="how-section">
+    <div class="container">
+      <p class="sec-label rv">✦ بسيط وسريع</p>
+      <h2 class="section-title rv">كيفاش <span>تطلب؟</span></h2>
+      <div class="divider rv"></div>
+      <div class="steps-row rv">
+        <div class="how-step">
+          <div class="how-step-num">
+            <span class="step-n">1</span>
+            📝
+          </div>
+          <h4>سجّل طلبك</h4>
+          <p>أملا الاسم والهاتف والمدينة في 30 ثانية</p>
+        </div>
+        <div class="how-step">
+          <div class="how-step-num">
+            <span class="step-n">2</span>
+            📞
+          </div>
+          <h4>نتواصلو معاك</h4>
+          <p>فريقنا يتصل بيك خلال أقل من ساعة لتأكيد الطلب</p>
+        </div>
+        <div class="how-step">
+          <div class="how-step-num">
+            <span class="step-n">3</span>
+            🚚
+          </div>
+          <h4>التوصيل لبيتك</h4>
+          <p>يوصلك المنتج خلال 2–4 أيام والدفع عند الاستلام</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+>>>>>>> a641b92 (feat: modern, responsive, fully refactored landing page)
   <!-- ===== BENEFITS ===== -->
   <section class="benefits-section">
     <div class="container">
@@ -770,6 +900,16 @@
     </div>
   </section>
 
+<<<<<<< HEAD
+=======
+  <!-- CTA BANNER -->
+  <div class="section-cta-banner">
+    <h2>جرّبي بلا مخاطرة — الدفع فقط عند الاستلام 🎁</h2>
+    <p>أكثر من 120 زبونة راضيات — انضمي إليهم اليوم</p>
+    <a href="#order" class="btn-banner">🛒 اطلب الآن بسعر 899 درهم</a>
+  </div>
+
+>>>>>>> a641b92 (feat: modern, responsive, fully refactored landing page)
   <!-- ===== TESTIMONIALS ===== -->
   <section class="testimonials-section">
     <div class="container">
@@ -829,6 +969,61 @@
     </div>
   </section>
 
+<<<<<<< HEAD
+=======
+  <!-- ===== FAQ ===== -->
+  <section class="faq-section">
+    <div class="container">
+      <p class="sec-label rv">✦ أسئلة شائعة</p>
+      <h2 class="section-title rv">عندك <span>سؤال؟</span></h2>
+      <div class="divider rv"></div>
+      <div class="faq-list rv">
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>كيفاش كيتم التوصيل؟</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a">نوصلو لجميع مدن المغرب عبر شركات الشحن المعتمدة — خلال 2 إلى 4 أيام عمل. التوصيل مجاني والدفع عند الاستلام فقط.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>واش ممكن نرجع المنتج إذا ما عجبنيش؟</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a">آه، عندنا سياسة إرجاع مرنة. إذا كان المنتج معيوب أو مش كيف توقعتيه، تواصلي معنا خلال 7 أيام وغادي نحلو ليك الأمر.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>شحال من وقت يبقى العرض؟</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a">العرض محدود بالكمية المتاحة — باقي غير 7 قطع. ما تخسريش الفرصة وسجلي طلبك دروك.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>واش الكوافيوز سهلة التركيب؟</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a">نعم، تجي مع دليل تركيب مفصل بالصور. وإذا محتاجتي مساعدة، فريقنا متاح على واتساب.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>واش فيه ضمان على المنتج؟</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a">آه، ضمان سنة كاملة ضد أي عيب في الصنع. جودتنا مضمونة 100%.</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+>>>>>>> a641b92 (feat: modern, responsive, fully refactored landing page)
   <!-- FOOTER -->
   <footer>
     <div class="footer-logo">Emdocal_<em>decor</em></div>
@@ -846,6 +1041,7 @@
   <!-- Scroll top -->
   <button id="scrollTop" title="العودة للأعلى">↑</button>
 
+<<<<<<< HEAD
   <!-- ===== JAVASCRIPT ===== -->
   <script>
     // Scroll-to-top
@@ -935,6 +1131,23 @@
       setTimeout(() => el.style.animation = '', 500);
     }
   </script>
+=======
+  <!-- Recent order toast -->
+  <div id="orderToast">
+    <div class="toast-avatar">ف</div>
+    <div class="toast-text">
+      <strong id="toastName">فاطمة من مراكش</strong>
+      <span id="toastTime">طلبت منذ 3 دقائق</span>
+    </div>
+    <div class="toast-dot"></div>
+  </div>
+
+  <!-- ===== JAVASCRIPT ===== -->
+
+
+  <!-- JS Modules -->
+  <script type="module" src="js/app.js"></script>
+>>>>>>> a641b92 (feat: modern, responsive, fully refactored landing page)
 
 </body>
 </html>
