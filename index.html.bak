@@ -604,8 +604,6 @@
           <div class="hf-item"><span class="hf-check">✓</span> ضمان جودة سنة كاملة</div>
         </div>
 
-<<<<<<< HEAD
-=======
         <!-- Countdown timer -->
         <div class="countdown-wrap">
           <span class="cd-label">⏰ العرض ينتهي بعد:</span>
@@ -618,7 +616,6 @@
           </div>
         </div>
 
->>>>>>> a641b92 (feat: modern, responsive, fully refactored landing page)
         <div class="hero-img-wrap">
           <img
             class="hero-img"
