@@ -1,180 +1,457 @@
 /* ===== REVEAL ANIMATION ===== */
-    .rv { opacity: 0; transform: translateY(28px); transition: opacity .6s cubic-bezier(.4,0,.2,1), transform .6s cubic-bezier(.4,0,.2,1); }
-    .rv.in { opacity: 1; transform: translateY(0); }
-    .d1 { transition-delay: .1s; }
-    .d2 { transition-delay: .22s; }
-    .d3 { transition-delay: .34s; }
+.rv {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity .6s cubic-bezier(.4, 0, .2, 1), transform .6s cubic-bezier(.4, 0, .2, 1);
+}
+
+.rv.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.d1 {
+  transition-delay: .1s;
+}
+
+.d2 {
+  transition-delay: .22s;
+}
+
+.d3 {
+  transition-delay: .34s;
+}
 
 /* ===== SHAKE ===== */
-    @keyframes shakeForm {
-      0%,100% { transform: translateX(0); }
-      20%,60%  { transform: translateX(-7px); }
-      40%,80%  { transform: translateX(7px); }
-    }
+@keyframes shakeForm {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  20%,
+  60% {
+    transform: translateX(-7px);
+  }
+
+  40%,
+  80% {
+    transform: translateX(7px);
+  }
+}
 
 /* ===== RIPPLE ===== */
-    @keyframes rippleAnim {
-      to { transform: scale(3.5); opacity: 0; }
-    }
+@keyframes rippleAnim {
+  to {
+    transform: scale(3.5);
+    opacity: 0;
+  }
+}
 
 /* ===== PAGE LOAD ANIMATIONS ===== */
-    @keyframes fadeSlideDown {
-      from { opacity: 0; transform: translateY(-14px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeSlideUp {
-      from { opacity: 0; transform: translateY(24px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to   { opacity: 1; }
-    }
-    @keyframes scaleIn {
-      from { opacity: 0; transform: scale(.93); }
-      to   { opacity: 1; transform: scale(1); }
-    }
-    @keyframes slideInRight {
-      from { opacity: 0; transform: translateX(32px); }
-      to   { opacity: 1; transform: translateX(0); }
-    }
-    @keyframes slideInLeft {
-      from { opacity: 0; transform: translateX(-32px); }
-      to   { opacity: 1; transform: translateX(0); }
-    }
-    @keyframes floatY {
-      0%,100% { transform: translateY(0); }
-      50%      { transform: translateY(-8px); }
-    }
-    @keyframes shimmer {
-      0%   { background-position: -200% center; }
-      100% { background-position:  200% center; }
-    }
-    @keyframes countUp {
-      from { opacity: 0; transform: translateY(10px) scale(.85); }
-      to   { opacity: 1; transform: translateY(0)   scale(1);    }
-    }
-    @keyframes borderPulse {
-      0%,100% { border-color: var(--gray-200); }
-      50%      { border-color: rgba(5,150,105,.45); }
-    }
-    @keyframes iconBounce {
-      0%,100% { transform: scale(1); }
-      40%      { transform: scale(1.18); }
-      60%      { transform: scale(.94); }
-    }
-    @keyframes gradientShift {
-      0%   { background-position: 0% 50%; }
-      50%  { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
+@keyframes fadeSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-14px);
+  }
 
-    /* Hero entry */
-    .hero-info { animation: fadeSlideUp .7s cubic-bezier(.4,0,.2,1) both; }
-    .hero-info .urgency-badge { animation: fadeSlideDown .55s .15s cubic-bezier(.4,0,.2,1) both; }
-    .hero-info .hero-title    { animation: fadeSlideUp  .65s .2s  cubic-bezier(.4,0,.2,1) both; }
-    .hero-info .hero-subtitle { animation: fadeSlideUp  .65s .32s cubic-bezier(.4,0,.2,1) both; }
-    .hero-info .price-block   { animation: scaleIn      .55s .44s cubic-bezier(.34,1.56,.64,1) both; }
-    .hero-info .hero-features { animation: fadeSlideUp  .6s  .52s cubic-bezier(.4,0,.2,1) both; }
-    .hero-img                 { animation: slideInLeft  .75s .3s  cubic-bezier(.4,0,.2,1) both; }
-    .hero-form-card           { animation: slideInRight .75s .2s  cubic-bezier(.4,0,.2,1) both; }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-    /* Nav logo & cta */
-    .nav-logo { animation: fadeSlideDown .5s .05s cubic-bezier(.4,0,.2,1) both; }
-    .nav-cta  { animation: fadeIn        .5s .2s  cubic-bezier(.4,0,.2,1) both; }
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
 
-    /* Floating hero image */
-    .hero-img-wrap .hero-img { animation: slideInLeft .75s .3s cubic-bezier(.4,0,.2,1) both, floatY 5s 1.2s ease-in-out infinite; }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-    /* Trust strip items slide in */
-    .ti { opacity: 0; animation: fadeSlideUp .5s both; }
-    .ti:nth-child(1) { animation-delay: .1s; }
-    .ti:nth-child(2) { animation-delay: .2s; }
-    .ti:nth-child(3) { animation-delay: .3s; }
-    .ti:nth-child(4) { animation-delay: .4s; }
-    .ti:nth-child(5) { animation-delay: .5s; }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
 
-    /* Stats number pop */
-    .sp-n { animation: countUp .55s cubic-bezier(.34,1.56,.64,1) both; }
+  to {
+    opacity: 1;
+  }
+}
 
-    /* Benefit icon bounce on card hover */
-    .benefit-card:hover .benefit-icon { animation: iconBounce .45s cubic-bezier(.4,0,.2,1); }
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(.93);
+  }
 
-    /* Animated gradient submit button */
-    .btn-submit {
-      background-size: 200% 200%;
-      background-image: linear-gradient(135deg, var(--primary) 0%, #10B981 50%, var(--primary-d) 100%);
-      animation: gradientShift 4s ease infinite;
-    }
-    .btn-submit:hover { animation: none; background-image: linear-gradient(135deg, var(--primary-d), var(--primary)); }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 
-    /* Price block shimmer on hover */
-    .price-block {
-      position: relative;
-      overflow: hidden;
-    }
-    .price-block::after {
-      content: '';
-      position: absolute;
-      top: 0; left: -100%; width: 60%; height: 100%;
-      background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,.55) 50%, transparent 100%);
-      transition: left .6s ease;
-      pointer-events: none;
-    }
-    .price-block:hover::after { left: 160%; }
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(32px);
+  }
 
-    /* Form inputs — ripple border on focus */
-    .form-control {
-      transition: border-color var(--tr), box-shadow var(--tr), background var(--tr), transform .15s ease;
-    }
-    .form-control:focus { transform: translateY(-1px); }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
-    /* Feature items stagger */
-    .hf-item { opacity: 0; animation: fadeSlideUp .45s both; }
-    .hf-item:nth-child(1) { animation-delay: .58s; }
-    .hf-item:nth-child(2) { animation-delay: .66s; }
-    .hf-item:nth-child(3) { animation-delay: .74s; }
-    .hf-item:nth-child(4) { animation-delay: .82s; }
-    .hf-item:nth-child(5) { animation-delay: .90s; }
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-32px);
+  }
 
-    /* Product image zoom */
-    .product-img-wrap { overflow: hidden; }
-    .product-img-wrap img { transition: transform .55s cubic-bezier(.4,0,.2,1); }
-    .product-img-wrap:hover img { transform: scale(1.04); }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
-    /* Form label lift animation */
-    .form-group { position: relative; }
-    .form-group label { transition: color var(--tr); }
-    .form-group:focus-within label { color: var(--primary); }
+@keyframes floatY {
 
-    /* Testimonial card — tilt on hover (handled by JS) */
-    .testimonial-card { transform-style: preserve-3d; will-change: transform; }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
 
-    /* Sticky CTA slide-up entry */
-    .sticky-cta { animation: fadeSlideUp .4s .8s both; }
+  50% {
+    transform: translateY(-8px);
+  }
+}
 
-    /* Success message pop */
-    .form-success { animation: scaleIn .45s cubic-bezier(.34,1.56,.64,1) both; }
-    .success-icon { display: block; animation: iconBounce .6s .1s cubic-bezier(.34,1.56,.64,1) both; }
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
 
-    /* Scroll-to-top spin on click */
-    #scrollTop.spin { animation: spinOnce .4s cubic-bezier(.4,0,.2,1); }
-    @keyframes spinOnce {
-      from { transform: rotate(0deg) scale(1); }
-      50%  { transform: rotate(-180deg) scale(1.2); }
-      to   { transform: rotate(-360deg) scale(1); }
-    }
+  100% {
+    background-position: 200% center;
+  }
+}
 
-    /* Topbar — moving dots / pulse on strong text */
-    .topbar strong {
-      display: inline-block;
-      animation: topbarPop 3s ease-in-out infinite;
-    }
-    @keyframes topbarPop {
-      0%,100% { transform: scale(1);    opacity: 1; }
-      50%      { transform: scale(1.07); opacity: .85; }
-    }
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(.85);
+  }
 
-    /* Divider animate width on reveal */
-    .divider { transform-origin: center; transform: scaleX(0); }
-    .divider.in { transform: scaleX(1); transition: transform .7s cubic-bezier(.34,1.56,.64,1) !important; }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes borderPulse {
+
+  0%,
+  100% {
+    border-color: var(--gray-200);
+  }
+
+  50% {
+    border-color: rgba(5, 150, 105, .45);
+  }
+}
+
+@keyframes iconBounce {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  40% {
+    transform: scale(1.18);
+  }
+
+  60% {
+    transform: scale(.94);
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Hero entry */
+.hero-info {
+  animation: fadeSlideUp .7s cubic-bezier(.4, 0, .2, 1) both;
+}
+
+.hero-info .urgency-badge {
+  animation: fadeSlideDown .55s .15s cubic-bezier(.4, 0, .2, 1) both;
+}
+
+.hero-info .hero-title {
+  animation: fadeSlideUp .65s .2s cubic-bezier(.4, 0, .2, 1) both;
+}
+
+.hero-info .hero-subtitle {
+  animation: fadeSlideUp .65s .32s cubic-bezier(.4, 0, .2, 1) both;
+}
+
+.hero-info .price-block {
+  animation: scaleIn .55s .44s cubic-bezier(.34, 1.56, .64, 1) both;
+}
+
+.hero-info .hero-features {
+  animation: fadeSlideUp .6s .52s cubic-bezier(.4, 0, .2, 1) both;
+}
+
+.hero-img {
+  animation: slideInLeft .75s .3s cubic-bezier(.4, 0, .2, 1) both;
+}
+
+.hero-form-card {
+  animation: slideInRight .75s .2s cubic-bezier(.4, 0, .2, 1) both;
+}
+
+/* Nav logo & cta */
+.nav-logo {
+  animation: fadeSlideDown .5s .05s cubic-bezier(.4, 0, .2, 1) both;
+}
+
+.nav-cta {
+  animation: fadeIn .5s .2s cubic-bezier(.4, 0, .2, 1) both;
+}
+
+/* Floating hero image */
+.hero-img-wrap .hero-img {
+  animation: slideInLeft .75s .3s cubic-bezier(.4, 0, .2, 1) both, floatY 5s 1.2s ease-in-out infinite;
+}
+
+/* Trust strip items slide in */
+.ti {
+  opacity: 0;
+  animation: fadeSlideUp .5s both;
+}
+
+.ti:nth-child(1) {
+  animation-delay: .1s;
+}
+
+.ti:nth-child(2) {
+  animation-delay: .2s;
+}
+
+.ti:nth-child(3) {
+  animation-delay: .3s;
+}
+
+.ti:nth-child(4) {
+  animation-delay: .4s;
+}
+
+.ti:nth-child(5) {
+  animation-delay: .5s;
+}
+
+/* Stats number pop */
+.sp-n {
+  animation: countUp .55s cubic-bezier(.34, 1.56, .64, 1) both;
+}
+
+/* Benefit icon bounce on card hover */
+.benefit-card:hover .benefit-icon {
+  animation: iconBounce .45s cubic-bezier(.4, 0, .2, 1);
+}
+
+/* Pulse glow on primary CTAs */
+.btn-submit,
+.btn-order {
+  animation: pulseGlow 2.6s ease-in-out infinite;
+}
+
+.btn-submit:hover,
+.btn-order:hover {
+  animation: none;
+}
+
+@keyframes pulseGlow {
+
+  0%,
+  100% {
+    box-shadow: 0 4px 24px rgba(5, 150, 105, .38);
+  }
+
+  50% {
+    box-shadow: 0 4px 32px rgba(5, 150, 105, .65), 0 0 0 6px rgba(5, 150, 105, .1);
+  }
+}
+
+/* Price block shimmer on hover */
+.price-block {
+  position: relative;
+  overflow: hidden;
+}
+
+.price-block::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, .55) 50%, transparent 100%);
+  transition: left .6s ease;
+  pointer-events: none;
+}
+
+.price-block:hover::after {
+  left: 160%;
+}
+
+/* Form inputs — ripple border on focus */
+.form-control {
+  transition: border-color var(--tr), box-shadow var(--tr), background var(--tr), transform .15s ease;
+}
+
+.form-control:focus {
+  transform: translateY(-1px);
+}
+
+/* Feature items stagger */
+.hf-item {
+  opacity: 0;
+  animation: fadeSlideUp .45s both;
+}
+
+.hf-item:nth-child(1) {
+  animation-delay: .58s;
+}
+
+.hf-item:nth-child(2) {
+  animation-delay: .66s;
+}
+
+.hf-item:nth-child(3) {
+  animation-delay: .74s;
+}
+
+.hf-item:nth-child(4) {
+  animation-delay: .82s;
+}
+
+.hf-item:nth-child(5) {
+  animation-delay: .90s;
+}
+
+/* Product image zoom */
+.product-img-wrap {
+  overflow: hidden;
+}
+
+.product-img-wrap img {
+  transition: transform .55s cubic-bezier(.4, 0, .2, 1);
+}
+
+.product-img-wrap:hover img {
+  transform: scale(1.04);
+}
+
+/* Form label lift animation */
+.form-group {
+  position: relative;
+}
+
+.form-group label {
+  transition: color var(--tr);
+}
+
+.form-group:focus-within label {
+  color: var(--primary);
+}
+
+/* Testimonial card — tilt on hover (handled by JS) */
+.testimonial-card {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+/* Sticky CTA slide-up entry */
+.sticky-cta {
+  animation: fadeSlideUp .4s .8s both;
+}
+
+/* Success message pop */
+.form-success {
+  animation: scaleIn .45s cubic-bezier(.34, 1.56, .64, 1) both;
+}
+
+.success-icon {
+  display: block;
+  animation: iconBounce .6s .1s cubic-bezier(.34, 1.56, .64, 1) both;
+}
+
+/* Scroll-to-top spin on click */
+#scrollTop.spin {
+  animation: spinOnce .4s cubic-bezier(.4, 0, .2, 1);
+}
+
+@keyframes spinOnce {
+  from {
+    transform: rotate(0deg) scale(1);
+  }
+
+  50% {
+    transform: rotate(-180deg) scale(1.2);
+  }
+
+  to {
+    transform: rotate(-360deg) scale(1);
+  }
+}
+
+/* Topbar — moving dots / pulse on strong text */
+.topbar strong {
+  display: inline-block;
+  animation: topbarPop 3s ease-in-out infinite;
+}
+
+@keyframes topbarPop {
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.07);
+    opacity: .85;
+  }
+}
+
+/* Divider animate width on reveal */
+.divider {
+  transform-origin: center;
+  transform: scaleX(0);
+}
+
+.divider.in {
+  transform: scaleX(1);
+  transition: transform .7s cubic-bezier(.34, 1.56, .64, 1) !important;
+}
